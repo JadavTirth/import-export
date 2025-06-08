@@ -1,9 +1,12 @@
 import React from "react";
 import { Container, Row, Col, Image } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
-import img1 from '../image2/img1.jpeg';
+import img1 from "../image2/img1.jpeg";
+import NavbarComponent from "../NavbarComponent";
 function Component1() {
   return (
+    <div>
+      <NavbarComponent/>
     <Container className="my-5">
       <Row className="align-items-center">
         {/* Left side: Image */}
@@ -13,6 +16,7 @@ function Component1() {
             alt="Profile"
             fluid
             rounded
+            style={{ maxWidth: "500px", height: "auto" }}
           />
         </Col>
 
@@ -29,6 +33,7 @@ function Component1() {
         </Col>
       </Row>
     </Container>
+    </div>
   );
 }
 

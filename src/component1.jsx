@@ -5,7 +5,7 @@ import img3 from "./image2/img3.jpeg";
 import ContactComponent from "./ContactComponent";
 import FooterComponent from "./FooterComponent";
 
-function Component2() {
+function Component1() {
   return (
     <div>
 
@@ -42,4 +42,4 @@ function Component2() {
   );
 }
 
-export default Component2;
+export default Component1;

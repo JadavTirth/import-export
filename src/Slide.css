@@ -1,0 +1,39 @@
+/* Remove all margin and padding from body */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.fullscreen-carousel {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Make image take full screen */
+.carousel-img {
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Text animation */
+.animated-text {
+  animation: fadeInUp 1s ease-in-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Optional: adjust caption position */
+.carousel-caption {
+  bottom: 20%;
+}

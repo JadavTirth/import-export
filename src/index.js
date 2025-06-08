@@ -5,11 +5,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ContactComponent from './ContactComponent';
-import Component1 from './pages/component-1';
+import Component1 from './component1';
 import Component2 from './component-2';
 import Component3 from './component-3';
 import Component4 from './component-4';
 import Component5 from './component-5';
+import ReadMore from './Readmore';
+
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -18,6 +20,10 @@ const allRoute = createBrowserRouter(
     {
       path: '/',
       element: <App/>
+    },
+    {
+      path: '/readmore',
+      element: <ReadMore/>
     },
     {
       path: '/contact',
@@ -49,7 +55,7 @@ const allRoute = createBrowserRouter(
       element: <Component5/>
 
     }
-    
+   
   ]
 )
 

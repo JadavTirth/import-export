@@ -1,28 +1,32 @@
-import React from 'react';
-import { Navbar, Nav, Container, NavDropdown, Form, FormControl, Button } from 'react-bootstrap';
+import React from "react";
+import './navbar.css';
+import { Link } from "react-router-dom";
+import {
+  Navbar,
+  Nav,
+  Container
+} from "react-bootstrap";
+import logo from './image2/Logo.jpg'
 
 function NavbarComponent() {
   return (
-    <Navbar bg="dark" variant="dark" expand="lg" sticky="top">
+    <Navbar style={{ backgroundColor: '#E8EAF6', color: 'black' }} expand="lg">
       <Container>
-        <Navbar.Brand href="#home">MyBrand</Navbar.Brand>
+        <Navbar.Brand as={Link} to="/">
+          <img
+            src={logo}
+            alt="Logo"
+            style={{ width: "50px", height: "50px" }}
+          />
+          Export & Import
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="main-navbar-nav" />
         <Navbar.Collapse id="main-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#features">Features</Nav.Link>
-            <Nav.Link href="#pricing">Pricing</Nav.Link>
-            <NavDropdown title="More" id="nav-dropdown">
-              <NavDropdown.Item href="#action1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action2">Another Action</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#something">Something else</NavDropdown.Item>
-            </NavDropdown>
+            <Nav.Link as={Link}  to="/">Home</Nav.Link>
+            <Nav.Link href="#content">About Us</Nav.Link>
+            <Nav.Link href="#contect">Contact Us</Nav.Link>
           </Nav>
-          <Form className="d-flex">
-            <FormControl type="search" placeholder="Search" className="me-2" />
-            <Button variant="outline-light">Search</Button>
-          </Form>
         </Navbar.Collapse>
       </Container>
     </Navbar>

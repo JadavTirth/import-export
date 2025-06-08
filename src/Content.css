@@ -1,0 +1,13 @@
+
+
+.custom-box {
+  width: 100%;
+  max-width: 1500px;
+  height: 400px;
+  background-color: white;
+ 
+}.custom-width {
+  max-width: 1600px; /* or 90%, or 100% if you want full width */
+  width: 100%;
+}
+
